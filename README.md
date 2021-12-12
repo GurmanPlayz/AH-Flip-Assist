@@ -8,6 +8,8 @@ This program that will recommend items to flip on the hypixel skyblock auction h
 
 > You MUST allow pop-ups for the site `http://localhost:3000` for this program to work. If your web-browser initialy blocks pop-ups, then change the permission to "always allow" and reload the page.
 
+> Even after the recomended flips are as accuate as they will get, they still may be incorrect or dangorus flips. I also recomend to have other mods that give you auction stats of an item, such as [NEU](https://github.com/Moulberry/NotEnoughUpdates/releases/). With this mod, you can use the "AH prices" as well as the "sales per day" to see if it is a safe flip.
+
 # Instalation
 ## Step 1
 In order for this program to work you first need to install a couple other libraries.
