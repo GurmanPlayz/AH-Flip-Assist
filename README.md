@@ -1,5 +1,8 @@
 # AH-Flip-Assist
 This program that will recommend items to flip on the hypixel skyblock auction house.
+> This program uploads all AH data it finds to you local machine. This data will be used to help inprove the program. YouMUST allow pop-ups for the site `http://localhost:3000` for this program to work. If your web-browser initialy blocks pop-ups, then change the permission to "always allow" and reload the page.
+
+> This program will not be accurate at first and the "potential profit" will not be entirely correct unill a week has passed, so it is recomended to compleatly ignore the "potential profit" untill you have had this program running consitantly for at least 5-7 days.
 
 # Instalation
 ## Step 1
