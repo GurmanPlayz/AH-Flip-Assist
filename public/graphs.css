@@ -1,0 +1,159 @@
+canvas {
+  display: block;
+  margin-left: 10vw;
+  box-shadow: inset 0px 0px 1cm rgb(40,65,80);
+  background-color: rgb(40,40,50);
+}
+
+#graphInfo {
+  position: absolute;
+  background-color: rgb(80,80,80);
+  font-family: 'Murecho', sans-serif;
+  font-size: 0.4cm;
+  border-radius: 0.3cm;
+  pointer-events: none;
+  padding:0.1cm;
+  color:rgb(210,210,210);
+}
+
+#graphLine {
+  background-color: rgb(200,200,200);
+  width:4px;
+  z-index: 0;
+  top:0px;
+  pointer-events: none;
+  position:absolute;
+}
+
+#inputText {
+  width:12cm;
+  height:1.5cm;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  margin-left:calc(50vw - 6cm);
+  margin-top:1.5cm;
+  margin-bottom:4cm;
+  font-size: 1cm;
+}
+
+.searchResultContainer {
+  position:absolute;
+  overflow-y: auto;
+  width:12cm;
+  left:calc(50vw - 6cm);
+  top:calc(3cm + 20px);
+  text-align: center;
+  cursor:pointer;
+}
+
+.searchResultContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.searchResultContainer::scrollbar {
+  display: none;
+}
+
+#currentLowestBIN {
+  width:100vw;
+  color:rgb(220,220,220);
+  margin-top:1cm;
+  font-size:1cm;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  margin-bottom:1cm;
+}
+
+
+.singleSearchResult {
+  z-index: 2;
+  position:static;
+  font-family: 'Murecho', sans-serif;
+  width:calc(100% - 0.2cm);
+  background-color:rgb(90,100,120);
+  font-size: 0.6cm;
+  border:0.05cm solid black;
+  transition: background-color .2s,color .2s;
+  user-select: none;
+}
+
+.singleSearchResult:hover {
+  background-color:rgb(40,50,70);
+  color:rgb(190,190,190);
+}
+
+.dropbtn {
+  font-family: 'Murecho', sans-serif;
+  background-color: #560bad;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  font-family: 'Murecho', sans-serif;
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  font-family: 'Murecho', sans-serif;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  cursor:pointer;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3a0ca3;}
+
+#violentText {
+  font-size:0.6cm;
+  color:red;
+  margin-left:10vw;
+  font-family: 'Murecho', sans-serif;
+}
+
+#violentTextVal {
+  margin-left:0.5cm;
+  font-size:0.5cm;
+  color:rgb(200,0,0);
+  display:inline-block;
+}
+
+.priceMarkers {
+  position:absolute;
+  font-family: 'Murecho', sans-serif;
+  font-size:0.5cm;
+  color: rgb(220,220,220);
+}
+
+.infoTable {
+  display: inline-block;
+  font-family: 'Murecho', sans-serif;
+  font-size:0.65cm;
+  color: rgb(220,220,220);
+  margin-right:5vw;
+  margin-left:5vw;
+}
+
+body {
+  margin:0px;
+  background-color: rgb(40,65,80);
+  overflow-x: hidden;
+  padding-bottom:3cm;
+}

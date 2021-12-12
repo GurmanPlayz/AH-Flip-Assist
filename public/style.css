@@ -1,0 +1,160 @@
+.tableDiv {
+    overflow-y:scroll;
+    height:95vh;
+    width:75vw;
+    margin-left:12.5vw;
+    border:2px solid rgb(220,220,220);
+    background-color: #34a0a4;
+    font-family: 'Murecho', sans-serif;
+}
+
+.tableHeader {
+  font-size: 20px;
+  background-color: #34a0a4;
+  width:calc(75vw + 0.1cm);
+  margin-left:12.5vw;
+  border:2px solid rgb(220,220,220);
+  font-family: 'Murecho', sans-serif;
+}
+
+
+#flipTable {
+  width:75vw;
+}
+
+tr {
+  border-bottom:2px solid black;
+  cursor:pointer;
+  transition: background-color .2s;
+  padding:10px;
+
+}
+th {
+  border:0px;
+  padding:5px;
+  border-radius: 4px;
+}
+tr:hover {
+  background-color:#76c893;
+}
+
+.infoIcon {
+  text-decoration: none;
+  
+}
+
+
+.statusBig {
+  position:absolute;
+  display:block;
+  width:10cm;
+  padding-top:0.5cm;
+  padding-bottom:0.5cm;
+  top:calc(50vh - 1cm);
+  left:calc(50vw - 5cm);
+  font-size:0.7cm;
+  border-radius:0.2cm;
+  box-shadow: 0px 0px 20px #03045e;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  background-color: #168aad;
+}
+.statusSmall {
+  position:absolute;
+  display:block;
+  width:11cm;
+  padding-top:0.35cm;
+  padding-bottom:0.35cm;
+  bottom:0px;
+  left:0px;
+  font-size:0.55cm;
+  border-top-right-radius:0.2cm;
+  box-shadow: 0px 0px 20px #03045e;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  background-color: #168aad;
+}
+#settingsGear {
+  position:absolute;
+  width:2cm;
+  height:2cm;
+  top:0.4cm;
+  cursor:pointer;
+  left:0.4cm;
+  z-index: 1;
+  filter:brightness(1.5);
+}
+
+.graphsButton {
+  position:absolute;
+  width:2cm;
+  height:2cm;
+  top:0.4cm;
+  cursor:pointer;
+  right:0.4cm;
+  z-index: 1;
+  padding:0.15cm;
+  filter:brightness(1.5);
+  border-radius: 0.5cm;
+  transition: background-color .3s;
+}
+
+.graphsButton:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+#settings {
+  position: absolute;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+  background-color:rgba(30,30,30,0.7);
+}
+
+.settingsHeader {
+  font-family: 'Murecho', sans-serif;
+  text-align: center;
+  font-size: 2cm;
+  color:rgb(220,220,220);
+  margin-bottom:2cm;
+}
+
+.settingsText {
+  font-family: 'Murecho', sans-serif;
+  margin-left:5cm;
+  margin-bottom: 1cm;
+  font-size: 1cm;
+  color:rgb(220,220,220);
+}
+
+.settingsInput {
+  width: 4.2cm;
+  height:0.8cm;
+  font-size: 0.6cm;
+  font-family: 'Murecho', sans-serif;
+  color:rgb(190,190,190);
+  background-color: rgba(170,170,170,0.5);
+  border: 2px solid rgb(220,220,220);
+  border-radius:0.2cm;
+  transform: translate(0px,-0.1cm);
+}
+
+body {
+  margin:0px;
+  background-color: #184e77;
+  overflow: hidden;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}

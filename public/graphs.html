@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title id="title">AH Graphs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="graphs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" type="image/jpg" href="icons/graphFavicon.jpg"/>
+
+    <script src="graphs.js"></script>
+    <script src="time.js"></script>
+    <script src="graphMath.js"></script>
+  </head>
+  <body>
+    <input type="text" id="inputText" placeholder="Enter item name" onfocus="graphUI.populateSearchBox(this)" oninput="graphUI.populateSearchBox(this)" onfocusout="graphUI.hideSearchResults()"></input>
+    <div id="allInfo">
+      <div class="dropdown" id="timeDrop">
+        <button class="dropbtn" id="timeDropLabel">Dropdown</button>
+        <div class="dropdown-content">
+          <div onclick="graphUI.updateTimeScale(this)">hour</div>
+          <div onclick="graphUI.updateTimeScale(this)">day</div>
+          <div onclick="graphUI.updateTimeScale(this)">week</div>
+          <div onclick="graphUI.updateTimeScale(this)">month</div>
+          <div onclick="graphUI.updateTimeScale(this)">year</div>
+          <div onclick="graphUI.updateTimeScale(this)">all</div>
+        </div>
+      </div>
+      <canvas id="canvas" onmousemove="graphUI.updateLine(event)" onmouseout="graphUI.hideLineData();"></canvas>
+      <div>
+        <div id="graphPriceMax" class="priceMarkers"></div>
+        <div id="graphPriceMin" class="priceMarkers"></div>
+      </div>
+      <div id="graphInfo" style="display:none;"></div>
+      <div id="graphLine"></div>`
+      <div id="violentText" style="display:none;"><div class="fa fa-exclamation-circle" style="font-size:0.8cm;transform: translate(0px,0.1cm);"></div> Volitile Market<div id="violentTextVal"></div></div>
+      <div>
+        <div id="currentLowestBIN"></div>
+        <div id="lowestBIN" class="infoTable"></div>
+        <div id="highestBIN" class="infoTable" style="float:right;"></div>
+      </div>
+    </div>
+    <div id="searchResults" class="searchResultContainer" onmouseover="graphUI.mouseOverInput=true;" onmouseout="graphUI.mouseOverInput=false;"><br></div>
+  </body>
+</html>

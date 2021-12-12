@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AH flip assist</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" type="image/jpg" href="icons/favicon.jpg"/>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="interface.js"></script>
+    <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript" src="graphMath.js"></script>
+  </head>
+  <body>
+    <div id="status" class="statusBig"></div>
+    <table class="tableHeader">
+      <tr>
+        <th style="width:37.5%;" title="The name of the item">Item</th>
+        <th style="width:15%;" title="The tier of the item">Rarity</th>
+        <th style="width:12.5%;" title="The potential flip profitablity depending on past prices">Potential profit</th>
+        <th style="width:12.5%;" title="The profit that could be made by flipping now">Profit now</th>
+        <th style="width:12.5%;" title="The potential markdown depending on past prices">Current markdown</th>
+        <th style="width:12.5%;" title="The current markdown from the lowest bin of that item">Potential markdown</th>
+      </tr>
+    </table>
+    <div class="tableDiv">
+      <table id="flipTable"></table>
+    </div>
+
+    <image src="icons/settingsGear.png" id="settingsGear" onclick="settings.toggle(this)">
+    <div id="settings" style="display:none;">
+      <div class="settingsHeader">Settings</div>
+
+      <div class="settingsText">Budget: <input type="text" id="budgetInput" class="settingsInput" oninput="settings.updateBudget(this)"></input></div>
+      <div class="settingsText">Risk<div style="font-size:0.5cm;display:inline-block;">&#160;&#160;&#160;(the amount of time in hours you want to average the prices over)</div><div style="display:inline-block;">:</div> <input type="text" id="riskInput" class="settingsInput" oninput="settings.updateRisk(this)"></input></div>
+      <div class="settingsText">Reload for settings to take effect</div>
+    </div>
+    <a href="graphs" target="_blank">
+      <image src="icons/graphIcon.png" class="graphsButton">
+    </a>
+  </body>
+</html>
