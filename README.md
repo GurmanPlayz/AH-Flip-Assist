@@ -54,7 +54,7 @@ When you first load the web-page it will take considerable longer to load all th
 
 ### potential profit
 
-Potenital profit shows how much lower this item is from the average price of this item over time, where the time is based on the risk.
+Potenital profit shows how much lower this item is from the average price of this item over time, where the time is based on the [risk](#risk).
 
 ### profit now
 
