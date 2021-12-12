@@ -22,4 +22,7 @@ Now type `npm install express@4.17.1`
 Wait for this to finish before continuing.
 
 ## Step 3
-Now you can download this repository. Click the code button in the top right of the screen. Then click download zip.
+Now you can download this repository. Click the code button in the top right of the screen. Then click download ZIP.
+
+Once you have downloaded the zip file navigate to it in your directory.
+Open the folder by double clicking it. inside you should see another folder named 
