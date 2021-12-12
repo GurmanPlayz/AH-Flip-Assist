@@ -1,4 +1,4 @@
-# AH-Flip-Assist
+# AH Flip Assist
 This program that will recommend items to flip on the hypixel skyblock auction house.
 
 ### please read!
@@ -52,3 +52,71 @@ Now all you have to do is navigate to `http://localhost:3000` in any browser and
 
 When you first load the web-page it will take considerable longer to load all the flips. This is because it needs to run again after it uploaded the data for the first time.
 
+### potential profit
+
+Potenital profit shows how much lower this item is from the average price of this item over time, where the time is based on the risk.
+
+### profit now
+
+Profit now is how much lower this item is from the next lowest BIN of that item.
+
+### markdown
+
+The markdown is how much of a markdown this item is from either the next lowest BIN (current markdown) or how much lower it is from the average price of this item over a certain amount of time (potential markdown).
+
+> You can click on any row in the table to copy the /viewauction id 
+
+## Settings
+
+You can acsess your settings from the gear icon in the top left corner of the screen. 
+
+> You must reload the page for new settings to take effect.
+
+> You must write all values out as numbers without commas.
+
+### Budget
+This program will only recomend items to flip that are under this value. The default is 1,000,000.
+
+### Risk
+The risk value will determine how items will be averaged to find the "potential profit" and the "potential markdown".
+
+This value is the maximum time that it will average items. eg. if you it was 24 it would average the price of that item over the last 24 hours to find the average price.
+
+If you have this value too low it may recomend you items that are currently being market manipulated. However, if you have it too high, it could recomend you items that were once worth something but not anymore.
+
+## Graphs
+
+You can open the graphs menu by clicking the graph icon in the top right corner of the screen.
+
+> These graphs depend on data saved to you local machine, so they will not have much data untill you have run the program many times over a period of time.
+
+### Using Graphs
+
+To view the item price history for a specific item, search for it in the search bar. 
+
+The graph will show the price of the item over the time selected from the dropdown above.
+
+The grey lines in the background show the times when data was saved to you computer. If this line is red, it means that data was saved then, but there were none of this item on the AH.
+
+### Volitle markets
+
+If the price of item is especialy volitle, it will say so underneath the graph as well as how volitle it is.
+
+> Note: The volitility stated depends on the time scale selected.
+
+### Extra information
+
+Underneath the graph the current lowest BIN for the item is stated.
+
+It also states the highest price of the lowest BIN as well as the lowest price for the lowest BIN of the item. Time scale also affects this.
+
+## Quickly accessing Graphs
+
+You can quickly access the graphs for an item by clicking the information symbol at the very left of a recommended flip.
+
+> If this information symbol is a red exclamation mark it means that that item has a volitile price currently. The brighter red this exclamation mark is, the more volitle the price is.
+
+***
+
+# Thats it!
+## I hope that this program is helpful to you.
