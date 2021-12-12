@@ -18,3 +18,8 @@ Next you are going to need to install express. This instalation is much simpilar
 Once you finish installing Node.js, open your command prompt. This can be done by typing cmd in the windows search bar.
 
 Now type `npm install express@4.17.1`
+
+Wait for this to finish before continuing.
+
+## Step 3
+Now you can download this repository.
