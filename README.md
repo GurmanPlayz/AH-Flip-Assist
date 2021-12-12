@@ -47,3 +47,8 @@ Finally open your command prompt again and type: node space the file name you ju
 When you press enter the text `app avaiable on http://localhost:3000!` should appear.
 Now all you have to do is navigate to `http://localhost:3000` in any browser and you should see the program!
 > Note: If you close the command prompt at any time the program will stop running. To start it again simpily retype `node your_file_path` in a command prompt window.
+
+# Usage
+
+When you first load the web-page it will take considerable longer to load all the flips. This is because it needs to run again after it uploaded the data for the first time.
+
