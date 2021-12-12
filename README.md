@@ -25,4 +25,6 @@ Wait for this to finish before continuing.
 Now you can download this repository. Click the code button in the top right of the screen. Then click download ZIP.
 
 Once you have downloaded the zip file navigate to it in your directory.
-Open the folder by double clicking it. inside you should see another folder named 
+Open the folder by double clicking it. inside you should see another folder named `AH-Flip-Assist-main`. Drag this file out into whatever folder you want to keep this program in. 
+
+> note you MUST move this file out of the original folder or it will not work. 
