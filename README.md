@@ -27,4 +27,6 @@ Now you can download this repository. Click the code button in the top right of 
 Once you have downloaded the zip file navigate to it in your directory.
 Open the folder by double clicking it. inside you should see another folder named `AH-Flip-Assist-main`. Drag this file out into whatever folder you want to keep this program in. 
 
-> note you MUST move this file out of the original folder or it will not work. 
+> note: you MUST move this file out of the original folder or it will not work. 
+
+Now, in the new directory this program is in, you want to open the folder and copy the file path of the `index.js` file inside this folder. You can copy the path by shift right clicking the `index.js` file and clicking the "save as path" option.
