@@ -33,4 +33,7 @@ Open the folder by double clicking it. inside you should see another folder name
 
 Now, in the new directory this program is in, you want to open the folder and copy the file path of the `index.js` file inside this folder. You can copy the path by shift right clicking the `index.js` file and clicking the "save as path" option.
 
-Finally open your command prompt again and type: node space the file name you just copied eg `ndoe C:\Users\me\file_path\AH-Flip-Assist-main\index.js`.
+Finally open your command prompt again and type: node space the file name you just copied eg `node C:\Users\me\file_path\AH-Flip-Assist-main\index.js`.
+
+When you press enter the text `app avaiable on http://localhost:3000!` should appear.
+Now all you have to do is navigate to `http://localhost:3000` in any browser and you should see the program!
