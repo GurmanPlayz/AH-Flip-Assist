@@ -23,7 +23,7 @@ var graphs = {
           time.currentSelected = time.incrementor[currentTimeIncrement+1];
           localStorage.graphScale = time.currentSelected;
           document.getElementById("timeDropLabel").innerHTML = time.currentSelected;
-          graphs.getGraphData(item);
+          graphs.getGraphData(item, callback);
         }
       });
     });
@@ -171,7 +171,6 @@ var graphUI= {
     priceSortedMax.sort(function(a,b){return b["dataPoint"].data-a["dataPoint"].data});
     var priceSortedMin = graphs.markerIndicators.slice();
     priceSortedMin.sort(function(a,b){return a["dataPoint"].data-b["dataPoint"].data});
-    console.log(priceSortedMin,priceSortedMax)
 
     var maxE = document.getElementById("graphPriceMax");
     maxE.innerHTML = graphUI.cleanUpNumbers(priceSortedMax[priceSortedMax.length-1].dataPoint.data);
