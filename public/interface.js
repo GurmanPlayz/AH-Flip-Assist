@@ -210,19 +210,21 @@ var flips = {
 }
 
 var timeChecker = {
-  itemTicks:undefined,
+  itemTicks:0,
   timeToUploads: function() {
     serverReq("meta/uploadTimes.txt", function(uploadTimes) {
       var currentTime = 0;
-      for(var i=uploadTimes.length-1;i>=1;i--) {
+      for(var i=1;i<uploadTimes.length;i++) {
         if(i<uploadTimes.length-1) {
           currentTime+=Number(uploadTimes[i-1])-Number(uploadTimes[i]);
         }
-        if(currentTime>=(userInfo.risk*1000)) {
-          timeChecker.timeTicks=i+1;
+        if(currentTime<=(userInfo.risk*1000)) {
+          timeChecker.itemTicks=i+1;
         }
       }
-      timeChecker.itemTicks=uploadTimes.length-1;
+      if(timeChecker.itemTicks ==0) {
+        timeChecker.itemTicks=uploadTimes.length-1;
+      }
     });
   }
 }
