@@ -50,7 +50,7 @@ Now all you have to do is navigate to `http://localhost:3000` in any browser and
 
 # Usage
 
-When you first load the web-page it will take considerable longer to load all the flips. This is because it needs to run again after it uploaded the data for the first time.
+When you first load the web-page it will take considerably longer to load all the flips. This is because it needs to run again after it uploaded the data for the first time.
 
 ### potential profit
 
