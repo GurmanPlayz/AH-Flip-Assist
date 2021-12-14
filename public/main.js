@@ -22,7 +22,8 @@ var AHData = {
 
 var userInfo = {
   budget: undefined,
-  risk: undefined
+  risk: undefined,
+  removeVolitile:350
 }
 
 window.onload = function() {

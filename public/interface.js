@@ -27,26 +27,40 @@ var UI = {
     if(loopLength>flips.allProfitability.length) loopLength = flips.allProfitability;
 
     for(var i=0;i<loopLength;i++) {
-      newRow = document.createElement("tr");
+      let index = i;
+      this.createGraphLink(flips.allProfitability[index].item, function(canAppend){
+        console.log(canAppend);
+        if(canAppend) {
+          newRow = document.createElement("tr");
 
-      newRow.title="click to copy view auction command";
-      newRow.appendChild(this.createGraphLink(flips.allProfitability[i].item));
-      newRow.appendChild(this.newCol(flips.allProfitability[i].item.item_name, i));
-      newRow.appendChild(this.newCol(flips.allProfitability[i].item.tier, i));
-      newRow.appendChild(this.newCol(UI.cleanUpNumbers(flips.allProfitability[i].potentialProfit), i));
-      newRow.appendChild(this.newCol(UI.cleanUpNumbers(flips.allProfitability[i].currentProfit), i));
-      newRow.appendChild(this.newCol(UI.roundPer(flips.allProfitability[i].currentPer), i));
-      newRow.appendChild(this.newCol(UI.roundPer(flips.allProfitability[i].potentialPer), i));
-      table.appendChild(newRow);
+          newRow.title="click to copy view auction command";
+          newRow.appendChild(UI.createGraphLink(flips.allProfitability[index].item));
+          newRow.appendChild(UI.newCol(flips.allProfitability[index].item.item_name, index));
+          newRow.appendChild(UI.newCol(flips.allProfitability[index].item.tier, index));
+          newRow.appendChild(UI.newCol(UI.cleanUpNumbers(flips.allProfitability[index].potentialProfit), index));
+          newRow.appendChild(UI.newCol(UI.cleanUpNumbers(flips.allProfitability[index].currentProfit), index));
+          newRow.appendChild(UI.newCol(UI.roundPer(flips.allProfitability[index].currentPer), index));
+          newRow.appendChild(UI.newCol(UI.roundPer(flips.allProfitability[index].potentialPer), index));
+
+          table.appendChild(newRow);
+        } else {
+          i--;
+        }
+      });
     }
   },
-  createGraphLink: function(profit) {
+  createGraphLink: function(profit, cb) {
     var newE = document.createElement("th");
     var a = document.createElement("a");
 
     var fileName=flips.getFileName(profit)
     graphMath.checkVolitility(fileName, function(volitility) {
       if(volitility>10) {
+        if(volitility>userInfo.removeVolitile) {
+          if(cb!=undefined)cb(false);
+        } else {
+          if(cb!=undefined) cb(true)
+        }
         newE.classList.add("fa");
         newE.classList.add("fa-exclamation-circle");
         var color = (100+(((volitility-10)/40)*100))
@@ -55,6 +69,7 @@ var UI = {
         newE.style.fontSize = "0.8cm";
         a.title = "(!!Volitile Market!!) click to see price graphs";
       } else {
+        if(cb!=undefined) cb(true)
         newE.style.fontSize = "0.6cm";
         newE.innerHTML = "&#9432;";
         newE.style.color="black";
@@ -204,7 +219,7 @@ var flips = {
     return sum/(timeBack+averager);
   },
   sortByProfit: function() {
-    flips.sortArrayProp="potentialProfit";
+    flips.sortArrayProp="potentialProfit"; // change how items are sorted
     flips.allProfitability.sort(function(a,b){return b[flips.sortArrayProp]-a[flips.sortArrayProp]});
   }
 }
