@@ -82,7 +82,7 @@ function getAllAHData(callback) {
         getAllAHData(callback);
       }
     })
-  }, 600);
+  }, 100);
 }
 
 function createCallBackLoader() {
